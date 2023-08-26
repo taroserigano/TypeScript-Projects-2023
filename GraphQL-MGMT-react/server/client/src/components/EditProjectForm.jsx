@@ -7,6 +7,12 @@ export default function EditProjectForm({ project }) {
   const [name, setName] = useState(project.name);
   const [description, setDescription] = useState(project.description);
   const [status, setStatus] = useState(() => {
+    // this will apply 
+    // onChange={(e) => setStatus(e.target.value)}
+    //       >
+    //         <option value="new">Not Started</option>
+    //         <option value="progress">In Progress</option>
+    //         <option value="completed">Completed</option>
     switch (project.status) {
       case "Not Started":
         return "new";
